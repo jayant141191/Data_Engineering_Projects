@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - npm install -g aws-cdk
+      - pip3 install -r requirements.txt
+  build:
+    commands:
+      - cdk synth vpc-stack-de-cdk-stg -o dist
+artifacts:
+  base-directory: 'dist'
+  files:
+    - 'vpc-stack-de-cdk-stg.template.json'
