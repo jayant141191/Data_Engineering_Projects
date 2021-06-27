@@ -25,3 +25,8 @@ sftp-config.json
 # Python
 __pycache__
 
+*.env
+.idea
+pgdata
+venv
+.DS_*
